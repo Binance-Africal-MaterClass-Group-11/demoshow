@@ -21,8 +21,7 @@
             href="/"
             class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
           >
-           
-          <img src="./img/logo.png" width="40" height="32">
+            <img src="./img/logo.png" width="40" height="32" />
           </a>
 
           <ul
@@ -30,11 +29,13 @@
           >
             <li>
               <a href="#" class="nav-link px-2 text-secondary text-big"
-                ><strong></strong></a
-              >
+                ><strong></strong
+              ></a>
             </li>
             <li>
-              <a href="/whitepaper.html" class="nav-link px-2 text-white">White Paper</a>
+              <a href="/whitepaper.html" class="nav-link px-2 text-white"
+                >White Paper</a
+              >
             </li>
             <li><a href="#" class="nav-link px-2 text-white">Farming</a></li>
             <li><a href="#" class="nav-link px-2 text-white">Team</a></li>
@@ -78,7 +79,9 @@
             <div class="card-body">
               <h1 class="card-title">Summary</h1>
               <h4><strong>Price</strong> $0.00123</h4>
-              <h4 class="mt-3"><strong>FF In Circulation</strong> 1,000,000</h4>
+              <h4 class="mt-3">
+                <strong>Fluid In Circulation</strong> 1,000,000
+              </h4>
               <h4><strong>Total supply</strong> 100,000,000</h4>
             </div>
           </div>
@@ -86,154 +89,219 @@
       </div>
     </div>
 
-   
     <div class="bg-gray pt-xl-5">
-        <div  id="farming">
-            <h1 class="text-dark font-60">STAKING</h1>
-            <div class="row">
-                <div class="col-lg-4 pt-5 text-center">
-                    <a target="_blank" class="btn-blue" href="https://app.uniswap.org/#/add/0x692eb773e0b5b7a79efac5a015c8b36a2577f65c/ETH">BNB – FLUID</a>
-                    <div class="py-5">
-                        <a target="_blank" href="https://app.uniswap.org/#/add/0x692eb773e0b5b7a79efac5a015c8b36a2577f65c/ETH" class="btn-w">Actual APY : <span class="l-eth-apy">412.79</span>%</a>
-                    </div>
-                    <div class="box-2">
-                        <h5 class="text-left pl-4">Deposit BNB
-                        </h5>
-                        <p class="">(Balance: <span id="l-token-balance">...</span> LP)</p>
+      <div id="farming">
+        <h1 class="text-dark font-60">STAKING</h1>
+        <div class="row">
+          <div class="col-lg-4 pt-5 text-center">
+            <a
+              target="_blank"
+              class="btn-blue"
+              href="https://app.uniswap.org/#/add/0x692eb773e0b5b7a79efac5a015c8b36a2577f65c/ETH"
+              >BNB – FLUID</a
+            >
+            <div class="py-5">
+              <a
+                target="_blank"
+                href="https://app.uniswap.org/#/add/0x692eb773e0b5b7a79efac5a015c8b36a2577f65c/ETH"
+                class="btn-w"
+                >Actual APY : <span class="l-eth-apy">412.79</span>%</a
+              >
+            </div>
+            <div class="box-2">
+              <h5 class="text-left pl-4">Deposit BNB</h5>
+              <p class="">
+                (Balance: <span id="l-token-balance">...</span> LP)
+              </p>
 
-                        <div class="pb-4">
-                            <div class="time">
-                                <div class="row">
-                                    <div class="col-6 pr-0">
-                                        <input id="l-deposit-input" type="text" name="Name" class="input" placeholder="" value="">
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="bg-blue">
-                                            <button id="l-stake-btn" class="btn-blue2">DEPOSIT</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <h5 class="text-left pl-4">Withdraw FLUID</h5>
-                        <div class="pb-4">
-                            <div class="time">
-                                <div class="row">
-                                    <div class="col-6 pr-0">
-                                        <input id="l-withdraw-input" type="text" name="Name" class="input" placeholder="" value="">
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="bg-blue">
-                                            <button id="l-unstake-btn" class="btn-blue2">WITHDRAW</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
+              <div class="pb-4">
+                <div class="time">
+                  <div class="row">
+                    <div class="col-6 pr-0">
+                      <input
+                        id="l-deposit-input"
+                        type="text"
+                        name="Name"
+                        class="input"
+                        placeholder=""
+                        value=""
+                      />
                     </div>
-                </div>
-                <!-- 2nd Dev -->
-                <div class="col-lg-4 pt-5 text-center">
-                    <a target="_blank" href="#" class="btn-blue">FLUID – BNB</a>
-                    <div class="py-5">
-                      <a target="_blank" href="#" class="btn-w">Actual APY : <span class="l-desh-apy">2004.47</span>%</a>
+                    <div class="col-6">
+                      <div class="bg-blue">
+                        <button id="l-stake-btn" class="btn-blue2">
+                          DEPOSIT
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                    <div class="box-2">
-                        <h5 class="text-left pl-4">Deposit FLUID </h5>
-                        <p class="">(Balance: <span id="l-desh-token-balance">...</span> LP)</p>
-                        <div class="pb-4">
-                            <div class="time">
-                                <div class="row">
-                                    <div class="col-6 pr-0">
-                                        <input id="l-desh-deposit-input" type="text" name="Name" class="input" placeholder="" value="">
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="bg-blue">
-                                            <button id="l-desh-stake-btn" class="btn-blue2">DEPOSIT</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <h5 class="text-left pl-4">Withdraw BNB </h5>
-                        <div class="pb-4">
-                            <div class="time">
-                                <div class="row">
-                                    <div class="col-6 pr-0">
-                                        <input id="l-desh-withdraw-input" type="text" name="Name" class="input" placeholder="" value="">
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="bg-blue">
-                                            <button id="l-desh-unstake-btn" class="btn-blue2">WITHDRAW</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
                 </div>
-                <!-- 3rd div -->
-                <div class="col-lg-4 pt-5 text-center">
-                    <a data-connected-text="Connected" href="#" class="btn-blue l-connect-wallet-btn">Connect Wallet</a>
-                    <div class="py-5">
-                        <a href="#" class="btn-blue">MY SUMMARY</a>
+              </div>
+              <h5 class="text-left pl-4">Withdraw FLUID</h5>
+              <div class="pb-4">
+                <div class="time">
+                  <div class="row">
+                    <div class="col-6 pr-0">
+                      <input
+                        id="l-withdraw-input"
+                        type="text"
+                        name="Name"
+                        class="input"
+                        placeholder=""
+                        value=""
+                      />
                     </div>
-                    <div class="box-blue text-white text-left px-xl-5 px-4">
-                        <div class="row pt-3">
-                            <div class="pl-0 col-7 pr-0">
-                                <h6>Staked BNB LP</h6>
-                            </div>
-                            <div class="col-5">
-                                <h6><span id="l-token-staked">...</span> <br>(<span id="l-share-percent">...</span>%)</h6>
-                            </div>
-                        </div>
-                        <div class="row pt-3">
-                            <div class="pl-0 col-7 pr-0">
-                                <h6>Staked Fluid LP</h6>
-                            </div>
-                            <div class="col-5 ">
-                                <h6><span id="l-desh-token-staked">...</span> <br>(<span id="l-desh-share-percent">...</span>%)</h6>
-                            </div>
-                        </div>
-                        <div class="row pt-3">
-                            <div class="pl-0 col-7">
-                                <h6>My total LP</h6>
-                            </div>
-                            <div class="col-5">
-                                <h6 id="l-total-lp">...</h6>
-                            </div>
-                        </div>
-                        <div class="row pt-3">
-                            <div class="pl-0 col-7 pr-0">
-                                <h6>Fluid claimable</h6>
-                            </div>
-                            <div class="col-5">
-                                <h6 id="l-FF-claimable">...</h6>
-                            </div>
-                        </div>
-                        <div class="row pt-3">
-                            <div class="pl-0 col-7 pr-0">
-                                <h6 class="">Appox. value of my Fluid rewards</h6>
-                            </div>
-                            <div class="col-5">
-                                <h6>$<span id="l-approx-usd-value">...</span></h6>
-                            </div>
-                        </div>
-                        <!-- <p>
+                    <div class="col-6">
+                      <div class="bg-blue">
+                        <button id="l-unstake-btn" class="btn-blue2">
+                          WITHDRAW
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd Dev -->
+          <div class="col-lg-4 pt-5 text-center">
+            <a target="_blank" href="#" class="btn-blue">FLUID – BNB</a>
+            <div class="py-5">
+              <a target="_blank" href="#" class="btn-w"
+                >Actual APY : <span class="l-desh-apy">2004.47</span>%</a
+              >
+            </div>
+            <div class="box-2">
+              <h5 class="text-left pl-4">Deposit FLUID</h5>
+              <p class="">
+                (Balance: <span id="l-desh-token-balance">...</span> LP)
+              </p>
+              <div class="pb-4">
+                <div class="time">
+                  <div class="row">
+                    <div class="col-6 pr-0">
+                      <input
+                        id="l-desh-deposit-input"
+                        type="text"
+                        name="Name"
+                        class="input"
+                        placeholder=""
+                        value=""
+                      />
+                    </div>
+                    <div class="col-6">
+                      <div class="bg-blue">
+                        <button id="l-desh-stake-btn" class="btn-blue2">
+                          DEPOSIT
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h5 class="text-left pl-4">Withdraw BNB</h5>
+              <div class="pb-4">
+                <div class="time">
+                  <div class="row">
+                    <div class="col-6 pr-0">
+                      <input
+                        id="l-desh-withdraw-input"
+                        type="text"
+                        name="Name"
+                        class="input"
+                        placeholder=""
+                        value=""
+                      />
+                    </div>
+                    <div class="col-6">
+                      <div class="bg-blue">
+                        <button id="l-desh-unstake-btn" class="btn-blue2">
+                          WITHDRAW
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3rd div -->
+          <div class="col-lg-4 pt-5 text-center">
+            <a
+              data-connected-text="Connected"
+              href="#"
+              class="btn-blue l-connect-wallet-btn"
+              >Connect Wallet</a
+            >
+            <div class="py-5">
+              <a href="#" class="btn-blue">MY SUMMARY</a>
+            </div>
+            <div class="box-blue text-white text-left px-xl-5 px-4">
+              <div class="row pt-3">
+                <div class="pl-0 col-7 pr-0">
+                  <h6>Staked BNB LP</h6>
+                </div>
+                <div class="col-5">
+                  <h6>
+                    <span id="l-token-staked">...</span> <br />(<span
+                      id="l-share-percent"
+                      >...</span
+                    >%)
+                  </h6>
+                </div>
+              </div>
+              <div class="row pt-3">
+                <div class="pl-0 col-7 pr-0">
+                  <h6>Staked Fluid LP</h6>
+                </div>
+                <div class="col-5">
+                  <h6>
+                    <span id="l-desh-token-staked">...</span> <br />(<span
+                      id="l-desh-share-percent"
+                      >...</span
+                    >%)
+                  </h6>
+                </div>
+              </div>
+              <div class="row pt-3">
+                <div class="pl-0 col-7">
+                  <h6>My total LP</h6>
+                </div>
+                <div class="col-5">
+                  <h6 id="l-total-lp">...</h6>
+                </div>
+              </div>
+              <div class="row pt-3">
+                <div class="pl-0 col-7 pr-0">
+                  <h6>Fluid claimable</h6>
+                </div>
+                <div class="col-5">
+                  <h6 id="l-FF-claimable">...</h6>
+                </div>
+              </div>
+              <div class="row pt-3">
+                <div class="pl-0 col-7 pr-0">
+                  <h6 class="">Appox. value of my Fluid rewards</h6>
+                </div>
+                <div class="col-5">
+                  <h6>$<span id="l-approx-usd-value">...</span></h6>
+                </div>
+              </div>
+              <!-- <p>
                             &nbsp;<br />
                         </p> -->
-                        <div class="pt-3 text-center">
-                            <a id="l-exit-btn" href="#" class="btn-gray1">EXIT BNB POOL</a>
-                        </div>
-                        <div class="pt-2 text-center">
-                            <a id="l-desh-exit-btn" href="#" class="btn-gray1">EXIT FLUID POOL</a>
-                        </div>
-                    </div>
-                </div>
+              <div class="pt-3 text-center">
+                <a id="l-exit-btn" href="#" class="btn-gray1">EXIT BNB POOL</a>
+              </div>
+              <div class="pt-2 text-center">
+                <a id="l-desh-exit-btn" href="#" class="btn-gray1"
+                  >EXIT FLUID POOL</a
+                >
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- About -->
@@ -248,7 +316,8 @@
           </div>
           <div class="col-lg-9 text-center text-lg-left pt-5">
             <div style="font-size: 3rem; margin-bottom: 2rem">
-              <span class="typed-words">Limited supply with infinite reward</span
+              <span class="typed-words"
+                >Limited supply with infinite reward</span
               ><span class="typed-cursor">|</span>
             </div>
             <div class="row text-center">
@@ -288,17 +357,16 @@
                         <p>
                           <img
                             class="img-Fluid"
-                            src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png"
+                            src="./img/tansu.png"
                             alt="card image"
                           />
                         </p>
                         <h4 class="card-title">Yvonne Tansu</h4>
                         <p class="card-text">
-                          Software Developer, M.sc-Mechanical.
+                          Software Developer, Student-Mathematical and Computer
+                          Science.
                         </p>
-                        <a
-                          href="#"
-                          class="btn btn-primary btn-sm"
+                        <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
                         ></a>
                       </div>
@@ -309,7 +377,7 @@
                       <div class="card-body text-center mt-4">
                         <h4 class="card-title">Yvonne Tansu</h4>
                         <p class="card-text">
-                            Software Developer, M.sc-Mechanical.
+                          Software Developer, M.sc-Mechanical.
                         </p>
                         <ul class="list-inline">
                           <li class="list-inline-item">
@@ -369,7 +437,7 @@
                         <p>
                           <img
                             class="img-Fluid"
-                            src="https://avatars.githubusercontent.com/u/38337273?v=4"
+                            src="./img/student2.jpg"
                             alt="card image"
                           />
                         </p>
@@ -377,9 +445,7 @@
                         <p class="card-text">
                           I'm a software developer(Full-Stack/Blockchain).
                         </p>
-                        <a
-                          href="#"
-                          class="btn btn-primary btn-sm"
+                        <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
                         ></a>
                       </div>
@@ -452,17 +518,16 @@
                         <p>
                           <img
                             class="img-Fluid"
-                            src="/img/chuks.png"
+                            src="./img/chuks.png"
                             alt="card image"
                           />
                         </p>
-                        <h4 class="card-title">Mario Wynes</h4>
+                        <h4 class="card-title">Okechukwu Ndunaka</h4>
                         <p class="card-text">
-                          Project co-odinator, and adviser.
+                          Transport/Maritime Management Technology.
+                          Python,Html,Solidity,SAP,Blockchain
                         </p>
-                        <a
-                          href="#"
-                          class="btn btn-primary btn-sm"
+                        <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
                         ></a>
                       </div>
@@ -471,9 +536,10 @@
                   <div class="backside">
                     <div class="card">
                       <div class="card-body text-center mt-4">
-                        <h4 class="card-title">Mario Wynes</h4>
+                        <h4 class="card-title">Okechukwu Ndunaka</h4>
                         <p class="card-text">
-                            Project manager, and adviser.
+                          Transport/Maritime Management Technology.
+                          Python,Html,Solidity,SAP,Blockchain
                         </p>
                         <ul class="list-inline">
                           <li class="list-inline-item">
@@ -533,17 +599,16 @@
                         <p>
                           <img
                             class="img-Fluid"
-                            src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_04.jpg"
+                            src="./img/abdul.png"
                             alt="card image"
                           />
                         </p>
-                        <h4 class="card-title">Abdulazeez Salihu</h4>
+                        <h4 class="card-title">Abdulazeez Muhammad Salihu</h4>
                         <p class="card-text">
-                          Contract developer on blockchain.
+                          Contract developer on blockchain/Solidity,Java,
+                          Android, Html, Css
                         </p>
-                        <a
-                          href="#"
-                          class="btn btn-primary btn-sm"
+                        <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
                         ></a>
                       </div>
@@ -552,10 +617,8 @@
                   <div class="backside">
                     <div class="card">
                       <div class="card-body text-center mt-4">
-                        <h4 class="card-title">Abdulazeez Salihu</h4>
-                        <p class="card-text">
-                            Contract developer on blockchain.
-                        </p>
+                        <h4 class="card-title">Abdulazeez Muhammad Salihu</h4>
+                        <p class="card-text">Java, Android, Html, Css,</p>
                         <ul class="list-inline">
                           <li class="list-inline-item">
                             <a
@@ -618,14 +681,9 @@
                             alt="card image"
                           />
                         </p>
-                        <h4 class="card-title">Sunlimetech</h4>
-                        <p class="card-text">
-                          This is basic card with image on top, title,
-                          description and button.
-                        </p>
-                        <a
-                          href="#"
-                          class="btn btn-primary btn-sm"
+                        <h4 class="card-title">Jalex</h4>
+                        <p class="card-text"> Business planner/ Documentation.</p>
+                        <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
                         ></a>
                       </div>
@@ -634,13 +692,8 @@
                   <div class="backside">
                     <div class="card">
                       <div class="card-body text-center mt-4">
-                        <h4 class="card-title">Sunlimetech</h4>
-                        <p class="card-text">
-                          This is basic card with image on top, title,
-                          description and button.This is basic card with image
-                          on top, title, description and button.This is basic
-                          card with image on top, title, description and button.
-                        </p>
+                        <h4 class="card-title">Jalex</h4>
+                        <p class="card-text"> Business planner/ Documentation.</p>
                         <ul class="list-inline">
                           <li class="list-inline-item">
                             <a
@@ -699,17 +752,15 @@
                         <p>
                           <img
                             class="img-Fluid"
-                            src="/img/student2.jpg"
+                            src="./img/team1-bg.png"
                             alt="card image"
                           />
                         </p>
                         <h4 class="card-title">Olatunji Peter</h4>
                         <p class="card-text">
-                            Business planner/ Documentation.
+                          Token distribution coordinator/Social media .
                         </p>
-                        <a
-                          href="#"
-                          class="btn btn-primary btn-sm"
+                        <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
                         ></a>
                       </div>
@@ -719,9 +770,7 @@
                     <div class="card">
                       <div class="card-body text-center mt-4">
                         <h4 class="card-title">Olatunji Peter</h4>
-                        <p class="card-text">
-                          Business planner/ Documentation
-                        </p>
+                        <p class="card-text">Business planner/ Documentation</p>
                         <ul class="list-inline">
                           <li class="list-inline-item">
                             <a
@@ -776,7 +825,7 @@
     <!-- footer -->
 
     <!-- footer2 -->
-    <footer id="footer" class="footerstc" style="background-color: #772953;">
+    <footer id="footer" class="footerstc" style="background-color: #772953">
       <div class="morequesti w-container">
         <div class="div-block-15">
           <h1 class="heading1 morequestionsheading">More questions?</h1>
@@ -811,7 +860,7 @@
             href="https://www.Fluidcoin.org"
             target="_blank"
             class="footer-logo-link w-inline-block"
-            ></a>
+          ></a>
           <div class="columns-24 w-row">
             <div class="w-col w-col-3">
               <div class="listholder">
