@@ -11,7 +11,7 @@
     <link href="theme/card.css" rel="stylesheet" />
     <link href="theme/footer.css" rel="stylesheet" />
   </head>
-  <body>
+  <body style="background-color: #772953;">
     <header class="p-3 bg-dark text-white">
       <div class="container">
         <div
@@ -43,10 +43,15 @@
           </ul>
 
           <div class="text-end">
+           
             <button type="button" class="btn btn-warning">
-              <strong>Connect Wallet</strong>
+              <strong><a data-connected-text="Wallet Connected" id="l-connect-wallet-btn"
+                 class="nav-link btn-gray ml-xl-5 l-connect-wallet-btn text-dark" href="#">Connect Wallet</a></strong>
             </button>
           </div>
+          
+          </div>
+          
         </div>
       </div>
     </header>
@@ -90,218 +95,180 @@
     </div>
 
     <div class="bg-gray pt-xl-5">
-      <div id="farming">
-        <h1 class="text-dark font-60">STAKING</h1>
+      <div class="container" id="farming">
+        <h1 class="text-dark font-60">FARMING</h1>
         <div class="row">
-          <div class="col-lg-4 pt-5 text-center">
-            <a
-              target="_blank"
-              class="btn-blue"
-              href="https://app.uniswap.org/#/add/0x692eb773e0b5b7a79efac5a015c8b36a2577f65c/ETH"
-              >BNB – FLUID</a
-            >
-            <div class="py-5">
-              <a
-                target="_blank"
-                href="https://app.uniswap.org/#/add/0x692eb773e0b5b7a79efac5a015c8b36a2577f65c/ETH"
-                class="btn-w"
-                >Actual APY : <span class="l-eth-apy">412.79</span>%</a
-              >
-            </div>
-            <div class="box-2">
-              <h5 class="text-left pl-4">Deposit BNB</h5>
-              <p class="">
-                (Balance: <span id="l-token-balance">...</span> LP)
-              </p>
+            <div class="col-lg-4 pt-5 text-center">
+                <a target="_blank" class="btn-blue" href="https://app.uniswap.org/#/add/0x692eb773e0b5b7a79efac5a015c8b36a2577f65c/BNB">Fluid – BNB</a>
+                <div class="py-5">
+                    <a target="_blank" href="https://app.uniswap.org/#/add/0x692eb773e0b5b7a79efac5a015c8b36a2577f65c/BNB" class="btn-w">Actual APY : <span class="l-BNB-apy">412.79</span>%</a>
+                </div>
+                <div class="box-2">
+                    <h5 class="text-left pl-4">Deposit Fluid–BNB LP
+                    </h5>
+                    <p class="">(Balance: <span id="l-token-balance">...</span> LP)</p>
 
-              <div class="pb-4">
-                <div class="time">
-                  <div class="row">
-                    <div class="col-6 pr-0">
-                      <input
-                        id="l-deposit-input"
-                        type="text"
-                        name="Name"
-                        class="input"
-                        placeholder=""
-                        value=""
-                      />
+                    <div class="pb-4">
+                        <div class="time">
+                            <div class="row">
+                                <div class="col-6 pr-0">
+                                    <input id="l-deposit-input" type="text" name="Name" class="input" placeholder="" value="">
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-blue">
+                                        <button id="l-stake-btn" class="btn-blue2">DEPOSIT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6">
-                      <div class="bg-blue">
-                        <button id="l-stake-btn" class="btn-blue2">
-                          DEPOSIT
-                        </button>
-                      </div>
+                    <h5 class="text-left pl-4">Withdraw Fluid–BNB LP</h5>
+                    <div class="pb-4">
+                        <div class="time">
+                            <div class="row">
+                                <div class="col-6 pr-0">
+                                    <input id="l-withdraw-input" type="text" name="Name" class="input" placeholder="" value="">
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-blue">
+                                        <button id="l-unstake-btn" class="btn-blue2">WITHDRAW</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <h5 class="text-left pl-4">Flow rewards</h5>
+                    <div class="pb-4">
+                        <div class="time">
+                            <div class="row">
+                                <div class="col-6 pr-0">
+                                    <input type="text" id="l-pending-divs" name="Name" disabled="" class="input" placeholder="" value="">
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-blue">
+                                        <button id="l-claim-btn" class="btn-blue2">CLAIM</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <h5 class="text-left pl-4">Withdraw FLUID</h5>
-              <div class="pb-4">
-                <div class="time">
-                  <div class="row">
-                    <div class="col-6 pr-0">
-                      <input
-                        id="l-withdraw-input"
-                        type="text"
-                        name="Name"
-                        class="input"
-                        placeholder=""
-                        value=""
-                      />
-                    </div>
-                    <div class="col-6">
-                      <div class="bg-blue">
-                        <button id="l-unstake-btn" class="btn-blue2">
-                          WITHDRAW
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <!-- 2nd Dev -->
-          <div class="col-lg-4 pt-5 text-center">
-            <a target="_blank" href="#" class="btn-blue">FLUID – BNB</a>
-            <div class="py-5">
-              <a target="_blank" href="#" class="btn-w"
-                >Actual APY : <span class="l-desh-apy">2004.47</span>%</a
-              >
-            </div>
-            <div class="box-2">
-              <h5 class="text-left pl-4">Deposit FLUID</h5>
-              <p class="">
-                (Balance: <span id="l-desh-token-balance">...</span> LP)
-              </p>
-              <div class="pb-4">
-                <div class="time">
-                  <div class="row">
-                    <div class="col-6 pr-0">
-                      <input
-                        id="l-desh-deposit-input"
-                        type="text"
-                        name="Name"
-                        class="input"
-                        placeholder=""
-                        value=""
-                      />
+            <!-- 2nd Dev -->
+            <div class="col-lg-4 pt-5 text-center">
+                <a target="_blank" href="https:0x95ba34760ac3d7fbe98ee8b2ab33b4f1a6d18878" class="btn-blue">Fluid – BNB</a>
+                <div class="py-5">
+                  <a target="_blank" href="https://app.uniswap.org/#/add/0x692eb773e0b5b7a79efac5a015c8b36a2577f65c/0x95ba34760ac3d7fbe98ee8b2ab33b4f1a6d18878" class="btn-w">Actual APY : <span class="l-desh-apy">2004.47</span>%</a>
+              </div>
+                <div class="box-2">
+                    <h5 class="text-left pl-4">Deposit Fluid–FLOW LP</h5>
+                    <p class="">(Balance: <span id="l-desh-token-balance">...</span> LP)</p>
+                    <div class="pb-4">
+                        <div class="time">
+                            <div class="row">
+                                <div class="col-6 pr-0">
+                                    <input id="l-desh-deposit-input" type="text" name="Name" class="input" placeholder="" value="">
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-blue">
+                                        <button id="l-desh-stake-btn" class="btn-blue2">DEPOSIT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6">
-                      <div class="bg-blue">
-                        <button id="l-desh-stake-btn" class="btn-blue2">
-                          DEPOSIT
-                        </button>
-                      </div>
+                    <h5 class="text-left pl-4">Withdraw Fluid–FLOW LP</h5>
+                    <div class="pb-4">
+                        <div class="time">
+                            <div class="row">
+                                <div class="col-6 pr-0">
+                                    <input id="l-desh-withdraw-input" type="text" name="Name" class="input" placeholder="" value="">
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-blue">
+                                        <button id="l-desh-unstake-btn" class="btn-blue2">WITHDRAW</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <h5 class="text-left pl-4">Withdraw BNB</h5>
-              <div class="pb-4">
-                <div class="time">
-                  <div class="row">
-                    <div class="col-6 pr-0">
-                      <input
-                        id="l-desh-withdraw-input"
-                        type="text"
-                        name="Name"
-                        class="input"
-                        placeholder=""
-                        value=""
-                      />
+                    <h5 class="text-left pl-4">Flow rewards</h5>
+                    <div class="pb-4">
+                        <div class="time">
+                            <div class="row">
+                                <div class="col-6 pr-0">
+                                    <input id="l-desh-pending-divs" type="text" name="Name" class="input" placeholder="" disabled="" value="">
+                                </div>
+                                <div class="col-6">
+                                    <div class="bg-blue">
+                                        <button id="l-desh-claim-btn" class="btn-blue2">CLAIM</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6">
-                      <div class="bg-blue">
-                        <button id="l-desh-unstake-btn" class="btn-blue2">
-                          WITHDRAW
-                        </button>
-                      </div>
+                </div>
+            </div>
+            <!-- 3rd div -->
+            <div class="col-lg-4 pt-5 text-center">
+                <a data-connected-text="Connected" href="#" class="btn-blue l-connect-wallet-btn">Connect Wallet</a>
+                <div class="py-5">
+                    <a href="#" class="btn-blue">MY SUMMARY</a>
+                </div>
+                <div class="box-blue text-white text-left px-xl-5 px-4">
+                    <div class="row pt-3">
+                        <div class="pl-0 col-7 pr-0">
+                            <h6>Staked BNB LP</h6>
+                        </div>
+                        <div class="col-5">
+                            <h6><span id="l-token-staked">...</span> <br>(<span id="l-share-percent">...</span>%)</h6>
+                        </div>
                     </div>
-                  </div>
+                    <div class="row pt-3">
+                        <div class="pl-0 col-7 pr-0">
+                            <h6>Staked FLUID LP</h6>
+                        </div>
+                        <div class="col-5 ">
+                            <h6><span id="l-desh-token-staked">...</span> <br>(<span id="l-desh-share-percent">...</span>%)</h6>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="pl-0 col-7">
+                            <h6>My total LP</h6>
+                        </div>
+                        <div class="col-5">
+                            <h6 id="l-total-lp">...</h6>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="pl-0 col-7 pr-0">
+                            <h6>FlOW claimable</h6>
+                        </div>
+                        <div class="col-5">
+                            <h6 id="l-Fluid-claimable">...</h6>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="pl-0 col-7 pr-0">
+                            <h6 class="">Appox. value of my FlOW rewards</h6>
+                        </div>
+                        <div class="col-5">
+                            <h6>$<span id="l-approx-usd-value">...</span></h6>
+                        </div>
+                    </div>
+                    <!-- <p>
+                        &nbsp;<br />
+                    </p> -->
+                    <div class="pt-3 text-center">
+                        <a id="l-exit-btn" href="#" class="btn-gray1">EXIT BNB POOL</a>
+                    </div>
+                    <div class="pt-2 text-center">
+                        <a id="l-desh-exit-btn" href="#" class="btn-gray1">EXIT BNB POOL</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- 3rd div -->
-          <div class="col-lg-4 pt-5 text-center">
-            <a
-              data-connected-text="Connected"
-              href="#"
-              class="btn-blue l-connect-wallet-btn"
-              >Connect Wallet</a
-            >
-            <div class="py-5">
-              <a href="#" class="btn-blue">MY SUMMARY</a>
-            </div>
-            <div class="box-blue text-white text-left px-xl-5 px-4">
-              <div class="row pt-3">
-                <div class="pl-0 col-7 pr-0">
-                  <h6>Staked BNB LP</h6>
-                </div>
-                <div class="col-5">
-                  <h6>
-                    <span id="l-token-staked">...</span> <br />(<span
-                      id="l-share-percent"
-                      >...</span
-                    >%)
-                  </h6>
-                </div>
-              </div>
-              <div class="row pt-3">
-                <div class="pl-0 col-7 pr-0">
-                  <h6>Staked Fluid LP</h6>
-                </div>
-                <div class="col-5">
-                  <h6>
-                    <span id="l-desh-token-staked">...</span> <br />(<span
-                      id="l-desh-share-percent"
-                      >...</span
-                    >%)
-                  </h6>
-                </div>
-              </div>
-              <div class="row pt-3">
-                <div class="pl-0 col-7">
-                  <h6>My total LP</h6>
-                </div>
-                <div class="col-5">
-                  <h6 id="l-total-lp">...</h6>
-                </div>
-              </div>
-              <div class="row pt-3">
-                <div class="pl-0 col-7 pr-0">
-                  <h6>Fluid claimable</h6>
-                </div>
-                <div class="col-5">
-                  <h6 id="l-FF-claimable">...</h6>
-                </div>
-              </div>
-              <div class="row pt-3">
-                <div class="pl-0 col-7 pr-0">
-                  <h6 class="">Appox. value of my Fluid rewards</h6>
-                </div>
-                <div class="col-5">
-                  <h6>$<span id="l-approx-usd-value">...</span></h6>
-                </div>
-              </div>
-              <!-- <p>
-                            &nbsp;<br />
-                        </p> -->
-              <div class="pt-3 text-center">
-                <a id="l-exit-btn" href="#" class="btn-gray1">EXIT BNB POOL</a>
-              </div>
-              <div class="pt-2 text-center">
-                <a id="l-desh-exit-btn" href="#" class="btn-gray1"
-                  >EXIT FLUID POOL</a
-                >
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
     </div>
 
     <!-- About -->
@@ -366,6 +333,7 @@
                           Software Developer, Student-Mathematical and Computer
                           Science.
                         </p>
+                        <p>Group Assignment: Github repo coordinator</p>
                         <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
                         ></a>
@@ -445,6 +413,7 @@
                         <p class="card-text">
                           I'm a software developer(Full-Stack/Blockchain).
                         </p>
+                        <p>Group Assignment: UI/UX Developer</p>
                         <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
                         ></a>
@@ -527,6 +496,7 @@
                           Transport/Maritime Management Technology.
                           Python,Html,Solidity,SAP,Blockchain
                         </p>
+                        <p>Group Assignment: Project manager and group leader</p>
                         <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
                         ></a>
@@ -541,6 +511,7 @@
                           Transport/Maritime Management Technology.
                           Python,Html,Solidity,SAP,Blockchain
                         </p>
+                        <p>Group Assignment: Project manager and group leader</p>
                         <ul class="list-inline">
                           <li class="list-inline-item">
                             <a
@@ -604,9 +575,10 @@
                           />
                         </p>
                         <h4 class="card-title">Abdulazeez Muhammad Salihu</h4>
+                        <p>Solidity,Java,
+                          Android, Html, Css</p>
                         <p class="card-text">
-                          Contract developer on blockchain/Solidity,Java,
-                          Android, Html, Css
+                          Group Assignment: Contract developer
                         </p>
                         <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
@@ -619,6 +591,7 @@
                       <div class="card-body text-center mt-4">
                         <h4 class="card-title">Abdulazeez Muhammad Salihu</h4>
                         <p class="card-text">Java, Android, Html, Css,</p>
+                        <P></P>
                         <ul class="list-inline">
                           <li class="list-inline-item">
                             <a
@@ -677,12 +650,13 @@
                         <p>
                           <img
                             class="img-Fluid"
-                            src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_05.png"
+                            src="./img/jalex.png"
                             alt="card image"
                           />
                         </p>
-                        <h4 class="card-title">Jalex</h4>
-                        <p class="card-text"> Business planner/ Documentation.</p>
+                        <h4 class="card-title">Jalekun Oladiji</h4>
+                        <p class="card-text">B.Tech Mech Engineer/Html,css, blockchain dev</p>
+                        <p>Group Assignment: Documentation Coordinator</p>
                         <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
                         ></a>
@@ -692,8 +666,8 @@
                   <div class="backside">
                     <div class="card">
                       <div class="card-body text-center mt-4">
-                        <h4 class="card-title">Jalex</h4>
-                        <p class="card-text"> Business planner/ Documentation.</p>
+                        <h4 class="card-title">Jalekun Oladiji</h4>
+                        <p class="card-text">  Documentation Coordinator(B.Tech Mech Engineer)/Html,css, blockchain dev.</p>
                         <ul class="list-inline">
                           <li class="list-inline-item">
                             <a
@@ -752,14 +726,15 @@
                         <p>
                           <img
                             class="img-Fluid"
-                            src="./img/team1-bg.png"
+                            src="./img/karen.jpg"
                             alt="card image"
                           />
                         </p>
-                        <h4 class="card-title">Olatunji Peter</h4>
-                        <p class="card-text">
-                          Token distribution coordinator/Social media .
+                        <h4 class="card-title">Karen Jimmy</h4>
+                        <p class="card-text">Tach enthusiast who hijacks technological trends and maximizes them for
+                          business growth and development.
                         </p>
+                        <p>Group Assignment: UX/UI</p>
                         <a href="#" class="btn btn-primary btn-sm"
                           ><i class="fa fa-plus"></i
                         ></a>
@@ -769,8 +744,10 @@
                   <div class="backside">
                     <div class="card">
                       <div class="card-body text-center mt-4">
-                        <h4 class="card-title">Olatunji Peter</h4>
-                        <p class="card-text">Business planner/ Documentation</p>
+                        <h4 class="card-title">Karen Jimmy</h4>
+                        <p class="card-text">Tach enthusiast who hijacks technological trends and maximizes them for
+                          business growth and development.
+                        </p>
                         <ul class="list-inline">
                           <li class="list-inline-item">
                             <a
@@ -864,7 +841,7 @@
           <div class="columns-24 w-row">
             <div class="w-col w-col-3">
               <div class="listholder">
-                <h1 class="heading-69">Information</h1>
+                <h2 class="heading-40">Information</h2>
                 <ul role="list" class="w-list-unstyled">
                   <li class="footerlistitem">
                     <a
@@ -911,7 +888,7 @@
             </div>
             <div class="column-64 w-col w-col-3">
               <div class="listholder">
-                <h1 class="heading-69">Fluid&nbsp;Ecosystem</h1>
+                <h2 class="heading-40">Ecosystem</h2>
                 <ul role="list" class="w-list-unstyled">
                   <li class="footerlistitem">
                     <a
@@ -963,7 +940,7 @@
             </div>
             <div class="w-col w-col-3">
               <div class="listholder">
-                <h1 class="heading-69">Contact</h1>
+                <h2 class="heading-69">Contact</h2>
                 <ul role="list" class="w-list-unstyled">
                   <li class="footerlistitem">
                     <a
@@ -995,7 +972,7 @@
             </div>
             <div class="column-65 w-col w-col-3">
               <div class="listholder legal">
-                <h1 class="heading-69">Legal</h1>
+                <h2 class="heading-69">Legal</h2>
                 <ul role="list" class="w-list-unstyled">
                   <li class="footerlistitem">
                     <a
@@ -1151,5 +1128,40 @@
 
     <script src="js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script src="./js/jquery-confirm.min.js"></script>
+    <script src="./js/alertify.min.js"></script>
+
+    <script src="./js/web3.min.js"></script>
+    <script src="./js/bignumber.min.js"></script>
+    <script src="./js/staking-v1.js"></script>
+    <script src="./js/staking-v2.js"></script>
+    <script>
+        $('.counter').counterUp({
+            delay: 10,
+            time: 2000
+        });
+   </script>
+   <!-- <script>
+    var typed = new Typed(".typed-words", {
+    strings: ["Limited supply with infinite rewards", "Governance", "Proof of Volume", "DeCash rose 20'000%","NFT's farming concept"],
+    typeSpeed: 30,
+    backSpeed: 10,
+    backDelay: 800,
+    startDelay: 500,
+    loop: true,
+    showCursor: true,
+    cursorChar: "|",
+    attr: null,
+  });
+
+
+  $(".sliding-link").click(function(e) {
+        e.preventDefault();
+        var aid = $(this).attr("href");
+        $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+    });
+  </script> -->
   </body>
 </html>
